@@ -25,13 +25,26 @@ FetchContent_MakeAvailable(googletest)
 
 # Now you can create your test executable and link against GTest targets
 add_executable(
-        tests
-        Google_tests/test_main.cpp
+        smoke_test
+        Google_tests/smoke_test/smoke_test.cpp
+        # Google_tests/test_main.cpp
+)
+
+add_executable(
+        unit_test
+        Google_tests/unit_test/unit_test.cpp
+        # Google_tests/test_main.cpp
 )
 target_link_libraries(
-        tests
+        smoke_test
+        gtest_main
+)
+
+target_link_libraries(
+        unit_test
         gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(tests)
+gtest_discover_tests(smoke_test)
+gtest_discover_tests(unit_test)
