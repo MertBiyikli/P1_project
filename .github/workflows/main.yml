@@ -19,6 +19,17 @@ jobs:
       - name: Build Docker image
         run: docker build -t graph_service .
 
+  lint:
+    runs-on: ubuntu-latest
+    needs: build  # Wait for 'build' job to complete
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Lint Dockerfile
+        run: docker run --rm hadolint/hadolint hadolint Dockerfile
+
   test:
     runs-on: ubuntu-latest
     needs: build  # Specify that 'test' job depends on 'build' job

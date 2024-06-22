@@ -185,17 +185,17 @@ graph_service/fast:
 .PHONY : graph_service/fast
 
 #=============================================================================
-# Target rules for targets named hello_test
+# Target rules for targets named tests
 
 # Build rule for target.
-hello_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_test
-.PHONY : hello_test
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
 
 # fast build rule for target.
-hello_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/build
-.PHONY : hello_test/fast
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -254,7 +254,7 @@ Google_tests/test_main.o: Google_tests/test_main.cpp.o
 
 # target to build an object file
 Google_tests/test_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/Google_tests/test_main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Google_tests/test_main.cpp.o
 .PHONY : Google_tests/test_main.cpp.o
 
 Google_tests/test_main.i: Google_tests/test_main.cpp.i
@@ -262,7 +262,7 @@ Google_tests/test_main.i: Google_tests/test_main.cpp.i
 
 # target to preprocess a source file
 Google_tests/test_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/Google_tests/test_main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Google_tests/test_main.cpp.i
 .PHONY : Google_tests/test_main.cpp.i
 
 Google_tests/test_main.s: Google_tests/test_main.cpp.s
@@ -270,7 +270,7 @@ Google_tests/test_main.s: Google_tests/test_main.cpp.s
 
 # target to generate assembly for a file
 Google_tests/test_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_test.dir/build.make CMakeFiles/hello_test.dir/Google_tests/test_main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/Google_tests/test_main.cpp.s
 .PHONY : Google_tests/test_main.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -315,7 +315,7 @@ help:
 	@echo "... graph_service"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... hello_test"
+	@echo "... tests"
 	@echo "... Google_tests/test_main.o"
 	@echo "... Google_tests/test_main.i"
 	@echo "... Google_tests/test_main.s"

@@ -1,5 +1,5 @@
 /Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/CMakeFiles/graph_service.dir
-/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/CMakeFiles/hello_test.dir
+/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/CMakeFiles/tests.dir
 /Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/CMakeFiles/test.dir
 /Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/CMakeFiles/rebuild_cache.dir

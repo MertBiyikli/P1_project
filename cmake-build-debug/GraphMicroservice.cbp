@@ -61,8 +61,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hello_test">
-				<Option output="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/hello_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="tests">
+				<Option output="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -78,14 +78,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 hello_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="hello_test/fast">
-				<Option output="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/hello_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="tests/fast">
+				<Option output="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -101,7 +101,7 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 hello_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -371,7 +371,7 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/Google_tests/test_main.cpp">
-			<Option target="hello_test"/>
+			<Option target="tests"/>
 		</Unit>
 		<Unit filename="/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/cmake-build-debug/_deps/googletest-src/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>

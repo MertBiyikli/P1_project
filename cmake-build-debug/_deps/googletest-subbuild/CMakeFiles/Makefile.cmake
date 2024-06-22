@@ -10,10 +10,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.24.4/CMakeSystem.cmake"
   "CMakeLists.txt"
   "googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake"
-  "/opt/local/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake"
   "/opt/local/share/cmake-3.24/Modules/CMakeGenericSystem.cmake"
   "/opt/local/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake"
-  "/opt/local/share/cmake-3.24/Modules/CMakeSystem.cmake.in"
   "/opt/local/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/local/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake"
   "/opt/local/share/cmake-3.24/Modules/ExternalProject.cmake"
@@ -35,7 +33,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.24.4/CMakeSystem.cmake"
   "googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake"
   "googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake"
   "googletest-populate-prefix/src/googletest-populate-stamp/extract-googletest-populate.cmake"
