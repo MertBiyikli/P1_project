@@ -27,5 +27,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Build Docker image (if not already built)
+        run: docker build -t graph_service .
+
       - name: Run tests
         run: docker run graph_service ./tests
