@@ -35,6 +35,12 @@ add_executable(
         Google_tests/unit_test/unit_test.cpp
         # Google_tests/test_main.cpp
 )
+
+add_executable(
+        integration_test
+        Google_tests/integration_test/integration_test.cpp
+        # Google_tests/test_main.cpp
+)
 target_link_libraries(
         smoke_test
         gtest_main
@@ -42,6 +48,11 @@ target_link_libraries(
 
 target_link_libraries(
         unit_test
+        gtest_main
+)
+
+target_link_libraries(
+        integration_test
         gtest_main
 )
 
