@@ -21,10 +21,14 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: build  # Specify that 'test' job depends on 'build' job
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Build Docker image (if not already built)
+        run: docker build -t graph_service .
 
       - name: Run tests
         run: docker run graph_service ./tests
