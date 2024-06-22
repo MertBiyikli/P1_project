@@ -25,13 +25,13 @@ FetchContent_MakeAvailable(googletest)
 
 # Now you can create your test executable and link against GTest targets
 add_executable(
-        hello_test
+        tests
         Google_tests/test_main.cpp
 )
 target_link_libraries(
-        hello_test
+        tests
         gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(hello_test)
+gtest_discover_tests(tests)
