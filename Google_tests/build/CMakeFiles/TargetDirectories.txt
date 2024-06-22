@@ -1,0 +1,5 @@
+/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/Google_tests/build/CMakeFiles/Google_Tests_run.dir
+/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/Google_tests/build/CMakeFiles/edit_cache.dir
+/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/Google_tests/build/CMakeFiles/rebuild_cache.dir
+/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/Google_tests/build/lib/CMakeFiles/edit_cache.dir
+/Users/halilibrahim/Desktop/SS2024/ASE/GraphMicroservice/Google_tests/build/lib/CMakeFiles/rebuild_cache.dir
