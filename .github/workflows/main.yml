@@ -19,7 +19,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t graph_service .
 
-  test:
+  smoke_test:
     runs-on: ubuntu-latest
     needs: build  # Wait for 'lint' job to complete
 
@@ -31,4 +31,18 @@ jobs:
         run: docker build -t graph_service .
 
       - name: Run tests
-        run: docker run graph_service ./tests
+        run: docker run graph_service ./smoke_test
+
+  unit_test:
+    runs-on: ubuntu-latest
+    needs: build  # Wait for 'lint' job to complete
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image (if not already built)
+        run: docker build -t graph_service .
+
+      - name: Run tests
+        run: docker run graph_service ./unit_test
