@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Continuous Integration
 
 on:
   push:
@@ -19,52 +19,32 @@ jobs:
       - name: Build Docker image
         run: docker build -t graph_service .
 
-      - name: Push Docker image to registry
-        run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag graph_service ${{ secrets.DOCKER_REGISTRY }}/graph_service:latest
-          docker push ${{ secrets.DOCKER_REGISTRY }}/graph_service:latest
+      - name: Run unit tests
+        run: docker run graph_service ./tests/unit
 
-  test:
+  lint:
     runs-on: ubuntu-latest
-    needs: build
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run tests
-        run: docker run graph_service ./tests
+      - name: Lint code
+        run: |
+          # Example linting commands (adjust to your project's needs)
+          docker run graph_service pylint .
+          docker run graph_service flake8 .
 
-  deploy:
+  security_scan:
     runs-on: ubuntu-latest
-    needs: test
 
     steps:
-      - name: Deploy to Kubernetes
-        uses: azure/k8s-deploy@v1
-        with:
-          azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
-          images: |
-            ${{ secrets.DOCKER_REGISTRY }}/graph_service:latest
-          namespace: default
-          deployment: |
-            apiVersion: apps/v1
-            kind: Deployment
-            metadata:
-              name: graph-service
-            spec:
-              replicas: 3
-              selector:
-                matchLabels:
-                  app: graph-service
-              template:
-                metadata:
-                  labels:
-                    app: graph-service
-                spec:
-                  containers:
-                    - name: graph-service
-                      image: ${{ secrets.DOCKER_REGISTRY }}/graph_service:latest
-                      ports:
-                        - containerPort: 8080
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Security scanning
+        run: |
+          # Example security scanning commands (adjust to your project's needs)
+          docker run graph_service bandit -r .
+
+  # You can add more jobs for additional stages like integration tests, performance tests, etc.
