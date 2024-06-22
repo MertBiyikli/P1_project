@@ -28,11 +28,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Lint Dockerfile
-        run: docker run --rm hadolint/hadolint hadolint Dockerfile
+        run: docker run --rm -v $(pwd):/hadolint hadolint/hadolint hadolint /hadolint/Dockerfile
 
   test:
     runs-on: ubuntu-latest
-    needs: build  # Specify that 'test' job depends on 'build' job
+    needs: lint  # Wait for 'lint' job to complete
 
     steps:
       - name: Checkout code
