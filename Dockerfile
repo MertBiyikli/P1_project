@@ -1,5 +1,5 @@
 # Use an official GCC image from Docker Hub
-FROM gcc:10.3
+FROM gcc:latest
 
 # Install necessary packages
 RUN apt-get update && apt-get install -y cmake libsqlite3-dev
