@@ -13,6 +13,9 @@ COPY . .
 # Build the application
 RUN cmake . && make
 
+# Verify that the application binary exists and has correct permissions
+RUN ls -l /app/graph_service
+
 # Expose the port the service runs on
 EXPOSE 8080
 
