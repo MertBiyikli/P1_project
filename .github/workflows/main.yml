@@ -72,8 +72,11 @@ jobs:
       - name: Build Docker image (if not already built)
         run: docker build -t graph_service .
 
-      - name: Inspect Docker image
+      - name: Inspect Docker image contents
         run: docker run --rm graph_service ls -l /app
 
-      - name: Run shell in Docker container
-        run: docker run --rm -it graph_service /bin/bash
+      - name: Check binary permissions
+        run: docker run --rm graph_service ls -l /app/graph_service
+
+      - name: Check for necessary shared libraries
+        run: docker run --rm graph_service ldd /app/graph_service
