@@ -59,7 +59,7 @@ jobs:
         run: docker build -t graph_service .
 
       - name: Run integration tests
-        run: docker run graph_service ./integration_tests
+        run: docker run graph_service ./integration_test
 
   debug:
     runs-on: ubuntu-latest
